@@ -1,0 +1,189 @@
+[gd_scene load_steps=25 format=3 uid="uid://b7iehkxl5dk0c"]
+
+[ext_resource type="Script" path="res://main_soundboard.gd" id="1_5suar"]
+[ext_resource type="Texture2D" uid="uid://bj0phsom8ofkf" path="res://cassette player design for godot assignment.png" id="1_ookul"]
+[ext_resource type="Script" path="res://button_1.gd" id="2_imqjq"]
+[ext_resource type="AudioStream" uid="uid://d1r2a37k4vnv2" path="res://lucky sound.mp3.wav" id="3_kswq1"]
+[ext_resource type="Script" path="res://button 2.gd" id="4_5lkrp"]
+[ext_resource type="AudioStream" uid="uid://drab7ikv1hv3s" path="res://yakuza.wav" id="5_bs2bl"]
+[ext_resource type="Script" path="res://button 3.gd" id="6_22wam"]
+[ext_resource type="AudioStream" uid="uid://dehnadakdkfs1" path="res://10 seconds.wav" id="6_45pak"]
+[ext_resource type="AudioStream" uid="uid://r36viv0mpdek" path="res://mouthful of nails.wav" id="8_awekx"]
+[ext_resource type="Script" path="res://button 4.gd" id="8_lihpw"]
+[ext_resource type="Script" path="res://button 5.gd" id="10_d1akn"]
+[ext_resource type="AudioStream" uid="uid://b4d0p1ph1awb0" path="res://message.wav" id="10_lyse2"]
+[ext_resource type="Script" path="res://button 6.gd" id="12_6jc1p"]
+[ext_resource type="AudioStream" uid="uid://t4xfvjb6nxqm" path="res://erased.wav" id="13_jvtux"]
+[ext_resource type="Script" path="res://button 7.gd" id="14_0gbhb"]
+[ext_resource type="AudioStream" uid="uid://b5qwdrgx3fls6" path="res://victory.wav" id="15_bkb8g"]
+[ext_resource type="Script" path="res://stop_button.gd" id="17_kfdps"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hv4gh"]
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cmw1y"]
+size = Vector2(16, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pv5tp"]
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rjqmh"]
+size = Vector2(16, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5bpn6"]
+size = Vector2(15, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p8q2l"]
+size = Vector2(15, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mtodt"]
+size = Vector2(16, 15)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_5suar")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(549, 324)
+texture = ExtResource("1_ookul")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(20, 18)
+script = ExtResource("2_imqjq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(642, 301)
+shape = SubResource("RectangleShape2D_hv4gh")
+
+[node name="1 button" type="AudioStreamPlayer" parent="Area2D"]
+stream = ExtResource("3_kswq1")
+
+[node name="Button 1" type="Button" parent="Area2D"]
+offset_left = 633.0
+offset_top = 294.0
+offset_right = 650.0
+offset_bottom = 309.0
+theme_override_font_sizes/font_size = 1
+text = "1"
+
+[node name="Area2D2" type="Area2D" parent="."]
+script = ExtResource("4_5lkrp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(689, 319.5)
+shape = SubResource("RectangleShape2D_cmw1y")
+
+[node name="2 button" type="AudioStreamPlayer" parent="Area2D2"]
+stream = ExtResource("5_bs2bl")
+
+[node name="Button 2" type="Button" parent="Area2D2"]
+offset_left = 681.0
+offset_top = 312.0
+offset_right = 697.0
+offset_bottom = 328.0
+
+[node name="Area2D3" type="Area2D" parent="."]
+script = ExtResource("6_22wam")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
+position = Vector2(716, 319)
+shape = SubResource("RectangleShape2D_pv5tp")
+
+[node name="3 button" type="AudioStreamPlayer" parent="Area2D3"]
+stream = ExtResource("6_45pak")
+volume_db = -0.937
+
+[node name="Button 3" type="Button" parent="Area2D3"]
+offset_left = 708.0
+offset_top = 311.0
+offset_right = 724.0
+offset_bottom = 328.0
+
+[node name="Area2D4" type="Area2D" parent="."]
+script = ExtResource("8_lihpw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4"]
+position = Vector2(662, 345.5)
+shape = SubResource("RectangleShape2D_rjqmh")
+
+[node name="4 button" type="AudioStreamPlayer" parent="Area2D4"]
+stream = ExtResource("8_awekx")
+
+[node name="Button 4" type="Button" parent="Area2D4"]
+offset_left = 654.0
+offset_top = 338.0
+offset_right = 671.0
+offset_bottom = 353.0
+
+[node name="Area2D5" type="Area2D" parent="."]
+script = ExtResource("10_d1akn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D5"]
+position = Vector2(689.5, 345.5)
+shape = SubResource("RectangleShape2D_5bpn6")
+
+[node name="5 button" type="AudioStreamPlayer" parent="Area2D5"]
+stream = ExtResource("10_lyse2")
+
+[node name="Button 5" type="Button" parent="Area2D5"]
+offset_left = 682.0
+offset_top = 338.0
+offset_right = 697.0
+offset_bottom = 353.0
+
+[node name="Area2D6" type="Area2D" parent="."]
+script = ExtResource("12_6jc1p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D6"]
+position = Vector2(715.5, 345.5)
+shape = SubResource("RectangleShape2D_p8q2l")
+
+[node name="6 button" type="AudioStreamPlayer" parent="Area2D6"]
+stream = ExtResource("13_jvtux")
+
+[node name="Button 6" type="Button" parent="Area2D6"]
+offset_left = 708.0
+offset_top = 337.0
+offset_right = 724.0
+offset_bottom = 353.0
+
+[node name="Area2D7" type="Area2D" parent="."]
+script = ExtResource("14_0gbhb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D7"]
+position = Vector2(689, 371.5)
+shape = SubResource("RectangleShape2D_mtodt")
+
+[node name="7 button" type="AudioStreamPlayer" parent="Area2D7"]
+stream = ExtResource("15_bkb8g")
+
+[node name="Button 7" type="Button" parent="Area2D7"]
+offset_left = 681.0
+offset_top = 364.0
+offset_right = 698.0
+offset_bottom = 379.0
+
+[node name="HSlider" type="HSlider" parent="."]
+offset_left = 661.0
+offset_top = 266.0
+offset_right = 735.0
+offset_bottom = 282.0
+min_value = -30.0
+max_value = 0.0
+
+[node name="stop button" type="Button" parent="."]
+offset_left = 614.0
+offset_top = 261.0
+offset_right = 648.0
+offset_bottom = 287.0
+toggle_mode = true
+script = ExtResource("17_kfdps")
+
+[connection signal="pressed" from="Area2D/Button 1" to="Area2D" method="_on_button_1_pressed"]
+[connection signal="pressed" from="Area2D2/Button 2" to="Area2D2" method="_on_button_2_pressed"]
+[connection signal="pressed" from="Area2D3/Button 3" to="Area2D3" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Area2D4/Button 4" to="Area2D4" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Area2D5/Button 5" to="Area2D5" method="_on_button_pressed"]
+[connection signal="pressed" from="Area2D6/Button 6" to="Area2D6" method="_on_button_6_pressed"]
+[connection signal="pressed" from="Area2D7/Button 7" to="Area2D7" method="_on_button_7_pressed"]
+[connection signal="value_changed" from="HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="stop button" to="stop button" method="_on_pressed"]
